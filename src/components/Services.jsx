@@ -33,8 +33,6 @@ const Services = () => {
       });
     }
   }, [swiper]);
-  const spaceBetweenInRem = 2.5; // for example, 2.5rem
-  const spaceBetweenInPx = spaceBetweenInRem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
   return (
     <div className='max-w-[1240px] mx-auto '>
@@ -42,7 +40,7 @@ const Services = () => {
       {showPrev && (
         <button
           onClick={() => swiper?.slidePrev()}
-          className='mr-3 bg-white border rounded-full p-1'
+          className='mr-1 bg-white border rounded-full p-1'
         >
           <MdOutlineChevronLeft size={20} />
         </button>
@@ -53,8 +51,8 @@ const Services = () => {
         slidesPerView={8}
         slidesPerGroup={8}
         onSwiper={setSwiper}
-        // spaceBetween={40}
-        spaceBetween={spaceBetweenInPx}
+        spaceBetween={50}
+        // spaceBetween={spaceBetweenInPx}
       >
         {slides.map((slide) => (
             <SwiperSlide key={slide} >
@@ -72,7 +70,7 @@ const Services = () => {
       {showNext && (
         <button
           onClick={() => swiper?.slideNext()}
-          className='ml-3 bg-white border rounded-full p-1'
+          className='ml-1 bg-white border rounded-full p-1'
         >
           <MdOutlineChevronRight size={20} />
         </button>
