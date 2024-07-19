@@ -12,7 +12,7 @@ const Navbar = () => {
     setDropdownOpen(!dropdownOpen);
   };
   return (
-    <div className="w-full justify-between items-center px-32 py-4 flex mx-auto shadow-md">
+    <div className="fixed w-full justify-between items-center px-32 py-4 flex mx-auto shadow-md z-9 bg-[#ffffff]">
       <div className="flex gap-4 items-center">
         <img className="w-[120px] h-[45px]" src={logo} alt="" />
         <div className={`w-[550px] border p-1 ${!dropdownOpen? 'rounded-full' : 'rounded-t-3xl'} flex  gap-2 `}>
@@ -48,17 +48,17 @@ const Navbar = () => {
           Sell
         </button>
 
-        <div className="bg-[#f7f7f9] p-3 rounded-full">
+        <a href="" className="bg-[#f7f7f9] hover:bg-[#dfdfe3] p-3 rounded-full">
           <AiFillMessage color="#777777" size={25} />
-        </div>
-        <div className="bg-[#f7f7f9] p-3 rounded-full">
+        </a>
+        <a href="" className="bg-[#f7f7f9] hover:bg-[#dfdfe3] p-3 rounded-full">
           <IoMdNotifications color="#777777" size={25} />
-        </div>
-        <img
+        </a>
+        <a href=""><img
           className=" border rounded-full w-[50px] h-[50px]"
           src={lovebird}
           alt=""
-        />
+        /></a>
       </div>
     </div>
   );
